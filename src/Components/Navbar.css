@@ -1,0 +1,37 @@
+
+span img{
+    width: 60px;
+}
+
+#colorr{
+color: rgb(9, 79, 231) !important;
+}
+#colorr:hover{
+    background-color: #0065db;
+    color: #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+}
+
+.gapp{
+    margin-right: 15px !important;
+}
+
+.text{
+    color: #fff !important;
+}
+.courses{
+    cursor: pointer !important;
+    
+}
+
+.courses:hover{
+    background: #0065db;
+    color: #fff;
+    
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+}
+
