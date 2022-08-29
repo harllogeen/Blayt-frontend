@@ -1,0 +1,40 @@
+.back {
+    margin-top: 6rem;
+}
+
+li i{
+    padding-right: 1rem ;
+    color: rgb(78, 78, 228);
+}
+
+li {
+    color: rgb(110, 106, 106);
+}
+.price {
+    padding-top: 6rem;
+    
+}
+p i{
+    color:rgb(78, 78, 228);
+    padding-right: 1rem;
+}
+.common {
+    text-align: center;
+}
+
+#index{
+    z-index: 1;
+}
+
+#width {
+    width: 60% !important;
+}
+
+#widths {
+    width: 40% !important ;
+}
+
+
+@media screen and (max-width:768px) {
+   
+}

@@ -1,6 +1,13 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Service = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000
+    });
+  }, []);
   return (
     <div>
       <section id="service">
@@ -16,7 +23,7 @@ const Service = () => {
           </div>
           <div className='row mt-5'>
             <div className='col-md-4'>
-              <div className="card p-3">
+              <div className="card shadow p-3 " data-aos="zoom-in">
                 <div className="card-body text-center">
                   <i className='fa fa-mobile fa-4x mb-4 text-primary' />
                   <h5 className="card-title mb-3 fs-4 fw-bold">Fully Responsive Layout</h5>
@@ -27,7 +34,7 @@ const Service = () => {
             </div>
 
             <div className='col-md-4'>
-              <div className="card p-3">
+              <div className="card shadow p-3" data-aos="zoom-in-up">
                 <div className="card-body text-center">
                   <i className='fa fa-users fa-4x mb-4 text-primary' />
                   <h5 className="card-title mb-3 fs-4 fw-bold">User Experience</h5>
@@ -37,7 +44,7 @@ const Service = () => {
               </div>
             </div>
             <div className='col-md-4'>
-              <div className="card p-3">
+              <div className="card shadow p-3" data-aos="zoom-in-down">
                 <div className="card-body text-center">
                   <i className='fa fa-laptop fa-4x mb-4 text-primary' />
                   <h5 className="card-title mb-3 fs-4 fw-bold">Creative Web Design</h5>
@@ -50,7 +57,7 @@ const Service = () => {
 
           <div className='row'>
             <div className='col-md-4'>
-              <div className="card p-3">
+              <div className="card shadow p-3" data-aos="zoom-in-left">
                 <div className="card-body text-center">
                   <i className='fa fa-file-code-o fa-4x mb-4 text-primary' />
                   <h5 className="card-title mb-3 fs-4 fw-bold">Unique and Clean</h5>
@@ -61,7 +68,7 @@ const Service = () => {
             </div>
 
             <div className='col-md-4'>
-              <div className="card p-3">
+              <div className="card shadow p-3" data-aos="fade-up">
                 <div className="card-body text-center">
                   <i className='fa fa-star-half fa-4x mb-4 text-primary' />
                   <h5 className="card-title mb-3 fs-4 fw-bold">Creative Idea</h5>
@@ -71,7 +78,7 @@ const Service = () => {
               </div>
             </div>
             <div className='col-md-4'>
-              <div className="card p-3">
+              <div className="card shadow p-3" data-aos="zoom-out">
                 <div className="card-body text-center">
                   <i className='fa fa-cogs fa-4x mb-4 text-primary' />
                   <h5 className="card-title mb-3 fs-4 fw-bold">Highly Customizable</h5>

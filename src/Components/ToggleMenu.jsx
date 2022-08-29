@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { NavLink } from "react-router-dom";
+
 import "./ToggleMenu.css"
 
 
@@ -15,6 +16,7 @@ function ToggleMenu(props) {
         <button className="navbar-toggler" type="button" data-toggle="collapse"
           aria-expanded="false" aria-label="Toggle navigation" onClick={toggleMenu} >
           <span className="navbar-toggler-icon"></span>
+
         </button>
         <div id="mylogo">
           <img src="/assets/about2.png" className="logo" alt="aboutme" />
@@ -37,12 +39,24 @@ function ToggleMenu(props) {
               <li className="line">
                 <NavLink onClick={() => { document.getElementById("close-button").click() }} to="/contact">Contact</NavLink>
               </li>
-
-
+              <li className="dropit">
+                <div class="dropdown" >
+                  <div className="dropitt">Courses</div>
+                  <div class="dropdown-content" onClick={() => { document.getElementById("close-button").click() }}>
+                    <NavLink onClick={() => { document.getElementById("close-button").click() }} to="/frontend">Frontend Web Development</NavLink>
+                    <NavLink onClick={() => { document.getElementById("close-button").click() }} to="/backend">Backend Web Development</NavLink>
+                    <NavLink onClick={() => { document.getElementById("close-button").click() }} to="/fullstack">Software Engineer</NavLink>
+                    <NavLink onClick={() => { document.getElementById("close-button").click() }} to="/design">UI/UX Design</NavLink>
+                  </div>
+                </div>
+              </li>
               <li>
                 <NavLink onClick={() => { document.getElementById("close-button").click() }} to="/register" className="bg-light text-primary px-4 rounded-2 "><i className='fa fa-user-plus me-2'></i>SIGN UP</NavLink >
 
               </li>
+
+
+
 
             </>
             :

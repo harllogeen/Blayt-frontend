@@ -8,18 +8,18 @@ const Logout = () => {
 
     const logout = async () => {
         try {
-            const res = await fetch('/logout',{
-                method : "GET",
-                headers : {
-                    Accept : "application/json",
-                    "Content-Type" : "application/json"
+            const res = await fetch('/logout', {
+                method: "GET",
+                headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json"
                 },
-                credentials : "include"
+                credentials: "include"
             });
 
-            if(res.status === 401 || !res){
+            if (res.status === 401 || !res) {
                 window.alert("Please Logout Later")
-            }else{
+            } else {
                 navigate('/');
                 window.location.reload()
             }
@@ -31,11 +31,11 @@ const Logout = () => {
     useEffect(() => {
         logout();
     }, [])
-  return (
-    <div>
+    return (
+        <div>
 
-    </div>
-  )
+        </div>
+    )
 }
 
 export default Logout

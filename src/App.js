@@ -15,6 +15,10 @@ import Register from './Components/Register';
 import Dashboard from './Components/Dashboard'
 import Logout from './Components/Logout';
 import ToggleMenu from './Components/ToggleMenu';
+import Frontend from './Pages/Frontend/Frontend';
+import Backend from './Pages/Backend/Backend';
+import Design from './Pages/Design/Design';
+import FullStack from './Pages/FullStack/FullStack';
 
 
 
@@ -76,8 +80,12 @@ function App() {
         <Route exact path="/contact" element={<Contact />} auth={auth1}/>
         <Route exact path="/login" element={<Login />} auth={auth1} />
         <Route exact path="/register" element={<Register />} auth={auth1} />
+        <Route path="/backend" exact  element={<Backend />} />
         <Route exact path="/dashboard" element={<Dashboard />}  auth={auth} />
         <Route exact path="/logout" element={<Logout />}  auth={auth}/>
+        <Route exact path="/design" element= {<Design />} />
+        <Route exact path="/frontend" element= {<Frontend />} />
+        <Route exact path="/fullstack" element= {<FullStack />} />
       </Routes>
      
       <Footer />

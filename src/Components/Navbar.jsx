@@ -9,6 +9,8 @@ import Courses from './Courses'
 const Navbar = (props) => {
 
   
+
+  
   return (
     <div id='navbar'>
       <nav className="navbar navbar-expand-lg bg-light shadow fixed-top d-flex" id='navnav'>

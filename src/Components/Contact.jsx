@@ -1,6 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Contact = () => {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 2000
+        });
+    }, []);
 
     const [msg, setMsg] = useState({
         name: "",
@@ -69,10 +77,10 @@ const Contact = () => {
 
                     <div className='row mt-5'>
                         <div className='col-md-6'>
-                            <img src='/assets/front5.jpg' alt='contact' className='w-100' />
+                            <img src='/assets/front5.jpg' alt='contact' className='w-100 shadow' data-aos="zoom-in" />
                         </div>
                         <div className='col-md-6'>
-                            <form onSubmit = {handleSubmit} method="POST" className='form-contact'>
+                            <form onSubmit={handleSubmit} method="POST" className='form-contact'>
                                 <div className="mb-3">
                                     <label htmlFor="name" className="form-label">Your Name</label>
                                     <input type="text  " className="form-control" id="" placeholder="Enter your Name"

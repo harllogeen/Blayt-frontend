@@ -2,6 +2,59 @@
     display: none;
 }
 
+.dropdown {
+    display: inline-block;
+    position: relative;
+    align-items: center;
+}
+
+.dropdown-content {
+    display: none;
+
+   width: 500px !important;
+    overflow: auto;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropit {
+    text-align: center;
+
+}
+
+.dropdown .dropitt {
+    padding: 10px 40px;
+    text-decoration: none;
+    color: #dae7e4;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2rem;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+}
+
+.dropdown-content a {
+    display: block;
+    color: #fff;
+    font-size: 1rem;
+    padding: 1rem;
+   
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    text-decoration: underline;
+}
+
+.dropdown-content a:hover {
+    color: #FFFFFF;
+    background-color: #00A4BD;
+}
+
 
 
 @media screen and (max-width:768px) {
@@ -13,7 +66,13 @@
         position: relative;
 
     }
-
+    .dropdown-content {
+        display: none;
+    
+        width: 500px;
+        overflow: auto;
+        box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+    }
 
     li a {
         display: block;
@@ -28,7 +87,7 @@
 
     }
 
-    li a:hover{
+    li a:hover {
         color: rgb(73, 82, 82);
     }
 
@@ -56,15 +115,15 @@
         height: 100vh;
         width: 100%;
         overflow: hidden;
-        z-index: 9;
+        z-index: 1000;
         transition: ease-in .2s;
         /* animation-name:rotate_sidebar; 
         animation-duration: 2s */
         animation-name: reverse1;
-        animation-duration: 1s
+        animation-duration: .7s
     }
 
-    
+
     .line {
 
         list-style: none;
@@ -110,5 +169,25 @@
 
     .mylogo {
         display: hidden
+    }
+}
+
+@media screen and (max-width:550px) {
+    .dropdown-content {
+        display: none;
+    
+        width: 400px !important;
+        overflow: auto;
+        box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+    }
+}
+
+@media screen and (max-width:450px) {
+    .dropdown-content {
+        display: none;
+    
+        width: 300px !important;
+        overflow: auto;
+        box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
     }
 }

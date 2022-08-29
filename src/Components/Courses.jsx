@@ -10,6 +10,7 @@ import Popper from '@mui/material/Popper';
 import MenuItem from '@mui/material/MenuItem';
 import MenuList from '@mui/material/MenuList';
 import Stack from '@mui/material/Stack';
+import { NavLink } from 'react-router-dom';
 
 export default function MenuListComposition() {
   const [open, setOpen] = React.useState(false);
@@ -48,7 +49,7 @@ export default function MenuListComposition() {
 
   return (
     <Stack direction="row" spacing={2}>
-      
+
       <div className='text'>
         <div className='text-btn'
           ref={anchorRef}
@@ -56,7 +57,7 @@ export default function MenuListComposition() {
           aria-controls={open ? 'composition-menu' : undefined}
           aria-expanded={open ? 'true' : undefined}
           aria-haspopup="true"
-          onClick={handleToggle}
+          onMouseOver={handleToggle}
         >
           COURSES
         </div>
@@ -84,10 +85,19 @@ export default function MenuListComposition() {
                     aria-labelledby="composition-button"
                     onKeyDown={handleListKeyDown}
                   >
-                    <MenuItem onClick={handleClose} to="/">Frontend</MenuItem>
-                    <MenuItem onClick={handleClose}>Backend</MenuItem>
-                    <MenuItem onClick={handleClose}>FullStack</MenuItem>
-                    <MenuItem onClick={handleClose}>Ui/Ux Design</MenuItem>
+                    <NavLink to="/frontend">
+                      <MenuItem onClick={handleClose}>Frontend web Development</MenuItem>
+                    </NavLink>
+                    <NavLink to="/backend">
+                      <MenuItem onClick={handleClose}>Backend web Development</MenuItem>
+                    </NavLink>
+
+                    <NavLink to="/design">
+                      <MenuItem onClick={handleClose}>Ui/Ux Design</MenuItem>
+                    </NavLink>
+                    <NavLink to="/fullstack">
+                      <MenuItem onClick={handleClose}>Software Engineering</MenuItem>
+                    </NavLink>
                   </MenuList>
                 </ClickAwayListener>
               </Paper>
